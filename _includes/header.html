@@ -1,0 +1,18 @@
+<header>
+	<nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+		<a class="pure-menu-heading" href="index.html">Clutch PCs</a>
+
+		<ul class="pure-menu-list">
+			<li class="pure-menu-item {% if page.pricing %}{{ page.pricing }}{% endif %}">
+				<a href="pricing.html" class="pure-menu-link">Pricing</a></li>
+			<li class="pure-menu-item {% if page.recommendations %}{{ page.recommendations }}{% endif %}">
+				<a href="recommendations.html" class="pure-menu-link">Recommendations</a></li>
+			<li class="pure-menu-item {% if page.how %}{{ page.how }}{% endif %}">
+				<a href="build-interest.html" class="pure-menu-link">How I Do it</a></li>
+			<li class="pure-menu-item {% if page.faq %}{{ page.faq }}{% endif %}">
+				<a href="faq.html" class="pure-menu-link">FAQ</a></li>
+			<li class="pure-menu-item {% if page.contact-us %}{{ page.contact-us }}{% endif %}">
+				<a href="contact.html" class="pure-menu-link">Contact Us</a></li>
+		</ul>
+	</nav>
+</header>

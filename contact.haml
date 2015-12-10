@@ -1,0 +1,29 @@
+---
+layout: home
+title: Contact Us -- Clutch PCs
+contact-us: pure-menu-selected
+---
+/ 
+	Yeah I know this page is a bit sparse. I couldn't think of anything to put in
+	it besides this small form
+	
+%main
+	%h1 Contact Us
+	%form.pure-form.pure-form-stacked
+		.contact
+			%fieldset
+				%legend Please fill out this form to contact us
+				%article
+					%label{:for => "name"} Name
+					%input{:id => "name", :type => "text"}
+
+				%article
+					%label{:for => "email"} Email Address
+					%input{:id => "email", :type => "text"}
+				%article
+					%label{:for => "Comments"} Comments
+					%textarea{:placeholder => "Something on your mind?"}
+				%article.submit
+					%button.pure-button.pure-button-primary.pure-input-1-2{:type => "submit"} Submit
+
+									

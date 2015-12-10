@@ -1,0 +1,331 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: black;
+}
+
+main {
+	margin-top: 125px; /*need to keep nav bar from overlapping*/
+	padding: 0px 5px;
+	color:white;
+}
+
+/*Article styles*/
+article {
+	background: rgb(59,70,82);
+	padding: 3px;
+	padding-bottom: 15px;
+	margin: 5px;
+	overflow: hidden;
+}
+
+article h1 {
+	text-align: left;
+	border-bottom: 1px solid grey;
+}
+
+article h1 .small {
+	font-size:.7em;
+	display: block;
+}
+h1.title {
+	margin-top: 0px;
+}
+article img {
+	margin: 0px auto 10px;
+	display: block;
+}
+
+article p {
+	margin: 0px 5px;
+}
+
+article a {
+    color: rgb(45, 210, 165);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: white;
+}
+
+/*pricing styles*/
+.pricing-tables {
+	margin: 0 auto;
+	max-width: 980px;
+	text-align: center;
+}
+
+.pricing-tables h1 {
+	font-size: 2em;
+	font-weight: normal;
+	margin: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.pricing-tables h2 {
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgb(205,205,205);
+	margin-bottom: .3em;
+}
+
+.pricing-table-price {
+	font-size: 6em;
+	font-weight: 100;
+}
+
+.pricing-table {	
+	border: 1px solid rgb(88, 103, 121);
+}
+
+.pricing-table-header {
+	border-bottom: 1px solid rgb(88, 103, 121);
+	overflow: hidden;
+}
+
+.pricing-tables .consumer {
+	/*background-image: url('../images/table-header-background.jpg');*/
+	background-color: rgb(0,100,50);
+	background-size: cover;
+}
+
+.pricing-tables .gamer {
+	background-color: rgb(200,139,67);
+}
+
+.pricing-tables .overkill {
+	background-color: rgb(149,94,169);
+}
+.pricing-tables article {
+	padding: 0;
+}
+
+.pricing-tables ul {
+	margin: 0;
+	padding: 0;
+}
+
+.pricing-tables ul li {
+	list-style-type: none;
+	border-bottom: 1px solid rgb(88, 103, 121);
+	padding: 15px 3px;
+	background-color: rgb(106,122,140);
+}
+
+.pricing-tables .pure-button {
+	border: 1px solid rgb(88, 103, 121);
+    border-radius: 2em;
+    font-weight: bold;
+    margin: 30px;
+}
+
+/*faq styles*/
+.pure-menu .faq a {
+	color: rgb(45, 210, 165);
+    text-decoration: none;
+    font-weight: bold;
+    white-space: normal;
+}
+
+.pure-menu .faq a:hover {
+	color:white;
+	background-color: transparent;
+	white-space: normal;
+}
+
+/* Forum Styles */
+
+/*Brace yourselves. Here comes all the !important tags!
+Seriously I couldn't override the styles pure placed on these
+without the override tag*/
+
+.pure-form fieldset {
+	margin-right: 10px !important;
+}
+
+.build legend {
+	color: rgb(205,205,205) !important;
+	border-color: #333 !important;
+}
+
+.build select {
+	background-color: #222 !important;
+	color:white;
+	margin: auto !important;
+}
+
+.build textarea {
+	background-color: #222 !important;
+	color: white;
+	margin: auto !important;
+	width: 95%;
+	height: 100px;
+}
+ .submit {
+ 	padding-top: 10px;
+	text-align: center;
+}
+.pure-form .contact fieldset {
+	width:100%;
+	margin: auto !important;
+}
+
+.pure-form .contact legend{
+	color: rgb(205,205,205) !important;
+	border-color: #333 !important;
+}
+
+.pure-form .contact article {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.pure-form .contact input[type="text"] {
+	background-color: #222 !important;
+	color: white;
+}
+
+.pure-form .contact label {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: rgb(205,205,205);
+}
+
+.pure-form .contact textarea {
+	background-color: #222 !important;
+	color: white;
+	width: 100%;
+	height: 100px;		
+}
+
+/*Custom Menu styles. These are the defaults. 
+Some of these are overriden depending on the size 
+of the screen*/
+
+.home-menu {
+	
+	box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+	background: rgb(21,69,119);
+	text-align: center;	
+}
+
+.home-menu .pure-menu-list {
+	color: white; 
+}
+
+.home-menu a {
+	color: white;
+	padding: .3em .1em;
+}
+
+.home-menu .pure-menu-link:hover {
+	color: black;
+}
+
+.home-menu .pure-menu-heading {
+	text-transform: none;
+	font-size: 2em;
+	display: block !important;	/*Need important to override pure stylesheet*/
+}
+
+.pure-menu-selected {
+	text-transform: uppercase;
+}
+
+.pure-menu-selected .pure-menu-link {
+	color:rgb(128,255,255) !important;
+}
+
+.pure-menu-selected .pure-menu-link:hover {
+	color:#000 !important;
+	text-transform: none;
+}
+
+/*Footer Styles*/
+footer { /*Visual styles for footer*/
+	background: rgb(59,70,82);
+	height: 50px;
+	font-size: 1.5em;
+	color: white;
+}
+
+footer{ /*This places footer perminately at the bottom of the page*/
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	white-space:nowrap;
+}
+
+footer { /*Aligns text middle center*/
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px; 
+}
+
+body { /*Styles need to position the footer correctly on the page*/
+	min-height:100%;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+
+body:after{ /*Creates buffer between content and footer*/
+	content:'';
+	display:block;
+	height:100px;
+}
+
+@media (min-width: 49em) {
+	/*Sets up the page for screen widths above 748px 
+	   otherwise revert to mobile layout*/
+	body{
+		font-size: 16px;
+	}
+
+	.home-menu {
+		text-align: left;
+		padding: 0.5em;
+	}
+	
+	.home-menu ul {
+		margin-top: 36px;
+		float:right;
+	}
+
+	.home-menu a {
+		padding: .5em 1em;
+	}
+	main {
+		margin-top: 90px;
+	}
+
+	.home-menu .pure-menu-heading {
+		display: inline-block !important; /*Need to override pure stylesheet*/
+		float: left; /*Need to get firefox to comply with other float nicely*/
+	}
+
+	article img {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+	article h1 .small {
+		display: inline-block;
+	}
+
+	.pure-form .contact fieldset {
+		width:30em;
+	}
+	
+}
