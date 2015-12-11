@@ -1,0 +1,62 @@
+---
+layout: home
+title: Checkout -- Clutch PCs
+javascript: true
+---
+:javascript
+	comp_build = getUrlVars();
+	comp_build = formatVars(comp_build);
+%main.pure-g
+	%section.pure-u-1.pure-u-md-1-2
+		%article
+			%h1 Your info
+			%form.pure-form.pure-form-stacked{:action => "submit.html"}
+				.contact
+					%fieldset
+						%legend Please fill out info to continue
+
+						%label{:for => "name"} Name
+						%input{:name => "name", :id => "name", :type => "text"}
+						%br
+
+						%label{:for => "email"} Email Address
+						%input{:id => "email", :type => "text", :name => "email"}
+						%br
+
+						%label{:for => "terms", :class => "pure-checkbox"}
+							/ Do I really need to create these?
+							%input{:id => "terms", :type => "checkbox"} I agree to the terms and conditions
+
+						%button.pure-button.pure-button-primary{:type => "submit"} Submit
+			}
+
+	%section.pure-u-1.pure-u-md-1-2
+		%article
+			%h1 Your Build
+			%table.pure-table.pure-table-bordered
+				%tr
+					%th Processor
+					%td{:id => "proc"}
+				%tr
+					%th.odd Amount of Ram
+					%td{:id => "ram"}
+				%tr
+					%th Optical Drive
+					%td{:id => "odd"}
+				%tr
+					%th.odd Hard Drives and Solid State
+					%td{:id => "write_medium"}
+				%tr
+					%th Network Adapter
+					%td{:id => "nic"}
+				%tr
+					%th.odd Case
+					%td{:id => "case"}
+				%tr
+					%th CPU Cooler
+					%td{:id => "cooler"}
+				%tr
+					%th.odd Graphics Card
+					%td{:id => "gpu"}
+:javascript
+	writeVars(comp_build);

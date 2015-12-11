@@ -1,105 +1,105 @@
 	-# This needs to be tabbed here for the include to be compiled right
 	-# Add contact info to this form
 	%h1 Build for {{ page.computer }}
-	%form.pure-form.pure-form-stacked
+	%form.pure-form.pure-form-stacked{:action => "checkout.html", :method => "get"}
 		.pure-g
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Choose a Proccessor
-					%select.pure-input-1-2{:id => "proc"}
-						%option{ {{ page.i3_selected}} } i3 3.2 GHz
-						%option{ {{ page.i5_selected}} } i5 3.0 GHz
-						%option{ {{ page.i7_selected}} } i7 3.4 GHz
+					%select.pure-input-1-2{:name => "proc"}
+						%option{ :value => "i3", {{ page.i3_selected}} } i3 3.9 GHz
+						%option{ :value => "i5", {{ page.i5_selected}} } i5 3.3 GHz
+						%option{ :value => "i7", {{ page.i7_selected}} } i7 3.4 GHz
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend How much ram you want?
-					%select.pure-input-1-2{:id => "ram"}
-						%option{ {{ page.4g_selected }} } 4 GB of Ram
-						%option{ {{ page.8g_selected }} } 8 GB of Ram
-						%option{ {{ page.16g_selected }} } 16 GB of Ram
-						%option{ {{ page.32g_selected }} } 32 GB of Ram
+					%select.pure-input-1-2{:name => "ram"}
+						%option{ :value => "4",{{ page.4g_selected }} } 4 GB of Ram
+						%option{ :value => "8", {{ page.8g_selected }} } 8 GB of Ram
+						%option{ :value => "16", {{ page.16g_selected }} } 16 GB of Ram
+						%option{ :value => "32", {{ page.32g_selected }} } 32 GB of Ram
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend To Optical or Not to Optical
 					%label.pure-radio
-						%input{:type => "radio", :checked => "checked", :name => "odd"} 
+						%input{:type => "radio", :checked => "checked", :name => "odd", :value => "false"} 
 						No Optical Drive
 					%label.pure-radio
-						%input{:type => "radio", :name => "odd"} 
+						%input{:type => "radio", :name => "odd", :value => "dvd"} 
 						Yes please! I want the DVD RW
 					%label.pure-radio
-						%input{:type => "radio", :name => "odd"}
+						%input{:type => "radio", :name => "odd", :value => "blueray"}
 						GIMMME! BLUERAY RW!
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Mix and Match your SSDs and HDD
-					%select.pure-input-1-2{:id => "ssd"}							
-						%option{ {{page.nosdd_selected}} } No SSD
-						%option{ {{page.120ssd_selected}} } 120 GB SSD
-						%option{ {{page.250ssd_selected}} } 250 GB SSD
-						%option{ {{page.500ssd_selected}} } 500 GB SSD
+					%select.pure-input-1-2{:name => "ssd"}							
+						%option{ :value => "false", {{page.nosdd_selected}} } No SSD
+						%option{ :value => "120", {{page.120ssd_selected}} } 120 GB SSD
+						%option{ :value => "250", {{page.250ssd_selected}} } 250 GB SSD
+						%option{ :value => "500", {{page.500ssd_selected}} } 500 GB SSD
 					%label.pure-checkbox
-						%input{:type => "checkbox", {{page.500hd_checked}} }
+						%input{:type => "checkbox", :value => "500", :name => "hdd", {{page.500hd_checked}} }
 						500 GB Hard Drive
 					%label.pure-checkbox
-						%input{:type => "checkbox", {{page.1000hd_checked}} }
+						%input{:type => "checkbox", :value => "1000", :name => "hdd", {{page.1000hd_checked}} }
 						1 TB Hard Drive
 					%label.pure-checkbox
-						%input{:type => "checkbox", {{page.3000hd_checked}} }
+						%input{:type => "checkbox", :value => "3000", :name => "hdd", {{page.3000hd_checked}} }
 						3TB Hard Drive
 					%label.pure-checkbox
-						%input{:type => "checkbox", {{page.5000hd_checked}} }
+						%input{:type => "checkbox", :value => "5000", :name => "hdd", {{page.5000hd_checked}} }
 						5TB Hard Drive
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Wireless or Wired
-					%select{:id => "ssd"}							
-						%option{ {{page.t1000_selected}} } Gigbyte Ethernet
-						%option{ {{page.bg_selected}} } Wireless Card
-						%option{ {{page.ac_selected}} } Killer AC Wireless Card
+					%select{:name => "nic"}							
+						%option{ :value => "w", {{page.t1000_selected}} } Gigbyte Ethernet
+						%option{ :value => "n", {{page.bg_selected}} } Wireless Card
+						%option{ :value => "ac", {{page.ac_selected}} } Killer AC Wireless Card
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Good, Better, Killer GPUs
-					%select{:id => "gpu"}
-						%option{ {{page.integrated_selected}} } Intergrated Graphics
-						%option{ {{page.starter_selected}} } 6670 hd Radeon Graphics
-						%option{ {{page.midgrade_selected}} } GTX 660 Nvida Graphics
-						%option{ {{page.great_selected}} } R9 280X Radeon Graphics
-						%option{ {{page.overkill_selected}} } GTX 970 Nvida Graphics
-						%option{ {{page.really_selected}} } GTX Titan Z Graphics
+					%select{:name => "gpu"}
+						%option{ :value => "false", {{page.integrated_selected}} } Intergrated Graphics
+						%option{ :value => "6670", {{page.starter_selected}} } 6670 hd Radeon Graphics
+						%option{ :value => "660", {{page.midgrade_selected}} } GTX 660 Nvida Graphics
+						%option{ :value => "280x", {{page.great_selected}} } R9 280X Radeon Graphics
+						%option{ :value => "970", {{page.overkill_selected}} } GTX 970 Nvida Graphics
+						%option{ :value => "titan", {{page.really_selected}} } GTX Titan Z Graphics
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Water or Air
 					%label.pure-radio
-						%input{:type => "radio", :name => "cooler", {{page.hyper212_checked}} } 
+						%input{:type => "radio", :name => "cooler", :value => "hyper212", {{page.hyper212_checked}} } 
 						CM Hyper 212 EVO - Air
 					%label.pure-radio
-						%input{:type => "radio", :name => "cooler", {{page.noctua_checked}} }
+						%input{:type => "radio", :name => "cooler", :value => "noctua", {{page.noctua_checked}} }
 						Noctua NH-U9DX I4 - Air
 					%label.pure-radio
-						%input{:type => "radio", :name => "cooler", {{page.corsairh55_checked}} }
+						%input{:type => "radio", :name => "cooler", :value => "corsairh55", {{page.corsairh55_checked}} }
 						Corsair Hydro H55 - Water
 					%label.pure-radio
-						%input{:type => "radio", :name => "cooler", {{page.corsairh110i_checked}} }
+						%input{:type => "radio", :name => "cooler", :value => "corsairh110i", {{page.corsairh110i_checked}} }
 						Corsair Hydro H110i GTX
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend	Cases, cases and more cases
 					%label.pure-radio
-						%input{:type=> "radio", :name => "case", {{page.win_checked}}}
+						%input{:type=> "radio", :name => "case", :value => "win", {{page.win_checked}}}
 						IN WIN 901 Silver Aluminum - Small
 					%label.pure-radio
-						%input{:type=> "radio", :name => "case", {{page.corsair_checked}}}
+						%input{:type=> "radio", :name => "case", :value => "corsair", {{page.corsair_checked}}}
 						Corsair Graphite Series 230T - Mid
 					%label.pure-radio
-						%input{:type=> "radio", :name => "case", {{page.thermaltake_checked}}}
+						%input{:type=> "radio", :name => "case", :value => "thermaltake", {{page.thermaltake_checked}}}
 						Thermaltake Chaser A71 Black - Big
 					%label.pure-radio
-						%input{:type=> "radio", :name => "case", {{page.nanoxia_checked}}}
+						%input{:type=> "radio", :name => "case", :value => "nanoxia", {{page.nanoxia_checked}}}
 						Nanoxia Deep Silence 6 - Seriously? You need something this big?
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Did we miss something you want? Tell us!
-					%textarea{:placeholder => "Custom Instructions"}
+					%textarea{:placeholder => "Custom Instructions", :name => "instructions", :value => "none"}
 			.pure-u-1.submit
 				%button.pure-button.pure-button-primary.pure-input-1-2{:type => "submit"} Buy it!

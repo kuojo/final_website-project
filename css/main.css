@@ -141,6 +141,18 @@ article a:hover {
 	white-space: normal;
 }
 
+/*table styles*/
+.pure-table {
+	margin: auto;
+}
+
+.pure-table th {
+	text-align: left;
+}
+.pure-table th.odd {
+	background: rgb(90,107,126);
+}
+
 /* Forum Styles */
 
 /*Brace yourselves. Here comes all the !important tags!
@@ -224,6 +236,13 @@ of the screen*/
 .home-menu a {
 	color: white;
 	padding: .3em .1em;
+}
+
+.home-menu .pure-menu-selected a:hover {
+	background: transparent;
+	text-transform: uppercase;
+	border: 0;	
+	color: pink !important;
 }
 
 .home-menu .pure-menu-link:hover {
