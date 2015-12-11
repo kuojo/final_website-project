@@ -137,6 +137,28 @@ function formatVars(args) {
 	if (args['instructions'] === ""){
 		args['instructions'] = "No Custom Instructions"
 	}
+	else {
+		// Needed to replace char codes with actual characters. 
+		// Probably missed a few but this should get most of them
+		args['instructions'] = args['instructions'].replace(/\+/g, ' ');
+		args['instructions'] = args['instructions'].replace(/%0D%0A/g, '<br>');
+		args['instructions'] = args['instructions'].replace(/%3C/g, '<');
+		args['instructions'] = args['instructions'].replace(/%3E/g, '>');
+		args['instructions'] = args['instructions'].replace(/%3F/g, '?');
+		args['instructions'] = args['instructions'].replace(/%21/g, '!');
+		args['instructions'] = args['instructions'].replace(/%2B/g, '+');
+		args['instructions'] = args['instructions'].replace(/%3D/g, '=');
+		args['instructions'] = args['instructions'].replace(/%5B/g, '[');
+		args['instructions'] = args['instructions'].replace(/%5D/g, ']');
+		args['instructions'] = args['instructions'].replace(/%5C/g, '\\');
+		args['instructions'] = args['instructions'].replace(/%2F/g, '/');
+		args['instructions'] = args['instructions'].replace(/%25/g, '%');
+		args['instructions'] = args['instructions'].replace(/%23/g, '#');
+		args['instructions'] = args['instructions'].replace(/%40/g, '@');
+		args['instructions'] = args['instructions'].replace(/%24/g, '$');
+		args['instructions'] = args['instructions'].replace(/%5E/g, '^');
+		args['instructions'] = args['instructions'].replace(/%26/g, '&');
+	}
 
 	return args;
 };
