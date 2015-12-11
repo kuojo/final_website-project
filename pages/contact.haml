@@ -2,6 +2,7 @@
 layout: home
 title: Contact Us -- Clutch PCs
 contact-us: pure-menu-selected
+css-link: ../
 ---
 / 
 	Yeah I know this page is a bit sparse. I couldn't think of anything to put in
@@ -15,14 +16,15 @@ contact-us: pure-menu-selected
 				%legend Please fill out this form to contact us
 				%article
 					%label{:for => "name"} Name
-					%input{:id => "name", :type => "text"}
+					%input{:id => "name", :type => "text", :pattern => "[A-Za-z]*", :title => "You Name", :required => "required"}
 
 				%article
 					%label{:for => "email"} Email Address
-					%input{:id => "email", :type => "text"}
+					/ There is no complete regex pattern to verify email addresses
+					%input{:id => "email", :type => "text", :required => "required"}
 				%article
 					%label{:for => "Comments"} Comments
-					%textarea{:placeholder => "Something on your mind?"}
+					%textarea{:placeholder => "Something on your mind?", :required => "required"}
 				%article.submit
 					%button.pure-button.pure-button-primary.pure-input-1-2{:type => "submit"} Submit
 

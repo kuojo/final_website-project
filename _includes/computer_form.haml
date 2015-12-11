@@ -38,17 +38,17 @@
 						%option{ :value => "120", {{page.120ssd_selected}} } 120 GB SSD
 						%option{ :value => "250", {{page.250ssd_selected}} } 250 GB SSD
 						%option{ :value => "500", {{page.500ssd_selected}} } 500 GB SSD
-					%label.pure-checkbox
-						%input{:type => "checkbox", :value => "500", :name => "hdd", {{page.500hd_checked}} }
+					%label.pure-radio
+						%input{:type => "radio", :value => "500", :name => "hdd", {{page.500hd_checked}} }
 						500 GB Hard Drive
-					%label.pure-checkbox
-						%input{:type => "checkbox", :value => "1000", :name => "hdd", {{page.1000hd_checked}} }
+					%label.pure-radio
+						%input{:type => "radio", :value => "1000", :name => "hdd", {{page.1000hd_checked}} }
 						1 TB Hard Drive
-					%label.pure-checkbox
-						%input{:type => "checkbox", :value => "3000", :name => "hdd", {{page.3000hd_checked}} }
+					%label.pure-radio
+						%input{:type => "radio", :value => "3000", :name => "hdd", {{page.3000hd_checked}} }
 						3TB Hard Drive
-					%label.pure-checkbox
-						%input{:type => "checkbox", :value => "5000", :name => "hdd", {{page.5000hd_checked}} }
+					%label.pure-radio
+						%input{:type => "radio", :value => "5000", :name => "hdd", {{page.5000hd_checked}} }
 						5TB Hard Drive
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
@@ -100,6 +100,6 @@
 			.pure-u-1.pure-u-md-1-3.build
 				%fieldset
 					%legend Did we miss something you want? Tell us!
-					%textarea{:placeholder => "Custom Instructions", :name => "instructions", :value => "none"}
+					%textarea{:placeholder => "Custom Instructions", :name => "instructions", :value => "No Instructions"}
 			.pure-u-1.submit
 				%button.pure-button.pure-button-primary.pure-input-1-2{:type => "submit"} Buy it!

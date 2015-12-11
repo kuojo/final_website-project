@@ -1,3 +1,17 @@
+/*stylesheet created for Clutch PCs website*/
+/*Created by Aryn Lacy*/
+
+/*
+This stylesheet is created with mobile in mind.
+All default styles (styles outside the @media block)
+are default for mobile. Most styles work for both. A 
+few need to be overwritten for using the @media block
+for desktop view. Anything specially styled for desktop
+is below in the @media block
+*/
+
+/* This is the starting layout */
+
 html {
 	height: 100%;
 }
@@ -13,6 +27,8 @@ main {
 }
 
 /*Article styles*/
+/* Some of these are overriden for desktop below */
+
 article {
 	background: rgb(59,70,82);
 	padding: 3px;
@@ -52,7 +68,7 @@ article a:hover {
     color: white;
 }
 
-/*pricing styles*/
+/*Styles created for the pricing page*/
 .pricing-tables {
 	margin: 0 auto;
 	max-width: 980px;
@@ -127,7 +143,8 @@ article a:hover {
     margin: 30px;
 }
 
-/*faq styles*/
+/*styles create for the faq page*/
+
 .pure-menu .faq a {
 	color: rgb(45, 210, 165);
     text-decoration: none;
@@ -141,7 +158,7 @@ article a:hover {
 	white-space: normal;
 }
 
-/*table styles*/
+/*html table styles*/
 .pure-table {
 	margin: auto;
 }
@@ -155,9 +172,11 @@ article a:hover {
 
 /* Forum Styles */
 
-/*Brace yourselves. Here comes all the !important tags!
+/*
+Brace yourselves. Here comes all the !important tags!
 Seriously I couldn't override the styles pure placed on these
-without the override tag*/
+without the override tag
+*/
 
 .pure-form fieldset {
 	margin-right: 10px !important;
@@ -218,9 +237,8 @@ without the override tag*/
 	height: 100px;		
 }
 
-/*Custom Menu styles. These are the defaults. 
-Some of these are overriden depending on the size 
-of the screen*/
+/* Custom Menu styles */
+/* Some of these are overriden for desktop below */
 
 .home-menu {
 	

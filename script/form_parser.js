@@ -2,6 +2,8 @@
 // Written by Aryn Lacy for offline form proccessing
 
 function getUrlVars() {
+	// This grabs the query string off the url and separates into a javascript object
+
 	var urlVars = {};
 	var queryString = window.location.search.replace(/^\?/, '');
 	queryString.split(/\&/).forEach(function(varPairs) {
@@ -14,7 +16,12 @@ function getUrlVars() {
 function formatVars(args) {
 	// I know that this is incredibly ugly and know that there are better ways
 	// Please forgive me
+	
+	// This needed because the get method has a character limitation.
+	// By setting everything as small as possible we can get all this info
+	// through the url. 
 
+	// Format the processor variable
 	if (args['proc'] === 'i3') {
 		args['proc'] = "Intel i3-6320 Skylake 3.9 GHz";
 	} else if (args['proc'] === 'i5') {
@@ -23,6 +30,7 @@ function formatVars(args) {
 		args['proc'] = "Intel i7-6700K Skylake 4.0 GHz";
 	}
 
+	// Format the ram Variable 
 	if (args['ram'] === '4') {
 		args['ram'] = "4 GB of Ram";
 	} else if (args['ram'] === '8') {
@@ -67,6 +75,10 @@ function formatVars(args) {
 		else {
 			args['hdd'] = "";
 		}
+	}
+
+	if (args['ssd'] === '') {
+		args['ssd'] = "No Solid State"
 	}
 
 	if (args['nic'] === "w") {
@@ -121,11 +133,18 @@ function formatVars(args) {
 	else {
 		args['case'] = "Nanoxia Deep Silence 6 <!--Thats a big case-->"
 	}
+	
+	if (args['instructions'] === ""){
+		args['instructions'] = "No Custom Instructions"
+	}
+
 	return args;
 };
 
 function writeVars(args){
-	ids = ['proc','ram','odd','write_medium', 'nic', 'case', 'cooler', 'gpu']
+	// Writes everything to the page
+
+	ids = ['proc','ram','odd','write_medium', 'nic', 'case', 'cooler', 'gpu', 'instructions']
 	
 	ids.forEach(function(id) {
 		if (id === 'write_medium') {
